@@ -1,0 +1,238 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Welcome to the New Era of Scientific Publishing</title>
+<link rel="stylesheet" href="dist/reset.css">
+<link rel="stylesheet" href="dist/reveal.css">
+<link rel="stylesheet" href="dist/theme/whitex.css">
+<style>
+.nanopub { text-align: left; margin: 20px; font-family: monaco,monospace; font-size: 10pt; color: #444; margin: 0 0 30px 0; padding: 0px 10px 10px 10px; border-radius: 10px; border: solid; border-width: 1px; }
+.nanopub a { color: #000; text-decoration: none; }
+.nanopub a:hover { color: #666; }
+.nanopub-prefixes { margin-top: 10px; }
+.nanopub-head { background: #e8e8e8; padding: 10px; margin-top: 10px; border-radius: 10px; }
+.nanopub-assertion { background: #99ccff; padding: 10px; margin-top: 10px; border-radius: 10px; }
+.nanopub-provenance { background: #f3a08c; padding: 10px; margin-top: 10px; border-radius: 10px; }
+.nanopub-pubinfo { background: #ffff66; padding: 10px; margin-top: 10px; border-radius: 10px; }
+</style>
+</head>
+
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section>
+<h2><span class="cem">Welcome to the New Era of Scientific Publishing</span></h2>
+<p>
+<strong>Tobias Kuhn</strong><br>
+VU Amsterdam
+<br>
+<small><a href="http://www.tkuhn.org">http://www.tkuhn.org</a></small>
+</p>
+<p>IOS Press 35 Year Anniversary, 31 March 2022</p>
+<p>
+<small>These slides: <a href="https://tinyurl.com/ios35era">https://tinyurl.com/ios35era</a></small>
+</p>
+</section>
+
+
+<section>
+<h3><span class="cem2">The Scientific Knowledge Cloud</span></h3>
+<img class="plain stretch" src="img/knowledge3.svg"/>
+</section>
+
+<section data-transition="slide-in">
+<h3><span class="cem2">Task for a Developer:</span></h3>
+<p><em>Retrieve all genes that have been found to play a role in a part of the respiratory system in Covid-19 patients. Only include results from randomized controlled trials published in the last seven days.</em></p>
+<img class="plain stretch" src="img/knowledge-dev1.svg"/>
+</section>
+
+<section data-transition="none">
+<h3><span class="cem2">Task for a Developer:</span></h3>
+<p><em>Retrieve all genes that have been found to play a role in a part of the respiratory system in Covid-19 patients. Only include results from randomized controlled trials published in the last seven days.</em></p>
+<img class="plain stretch" src="img/knowledge-dev.svg"/>
+</section>
+
+<section data-transition="slide-in">
+<h3><span class="cem">Problem:</span> Scientific Results are Represented in Plain Text Only</h3>
+<img class="plain stretch" src="img/paper1.svg"/>
+</section>
+
+<section data-transition="none">
+<h3><span class="cem">Problem:</span> Scientific Results are Represented in Plain Text Only</h3>
+<img class="plain stretch" src="img/paper.svg"/>
+</section>
+
+<section>
+<h3>Text Mining in 2015: <span class="cem">Not Good Enough</span></h3>
+<p>Chemical-disease relation extraction:</p>
+<img class="plain" style="width: 60%" src="img/biocreative2015logo.png"/>
+<img class="plain" style="width: 60%" src="img/biocreative2015.svg"/>
+</section>
+
+<section>
+<img class="plain" style="width: 40%" src="img/biocreative2021logo.png"/>
+<div class="fragment">
+<p>Drug-gene relation type extraction:</p>
+<img class="plain" style="width: 90%; margin-top: -5mm;" src="img/biocreative2021r.svg"/>
+</div>
+<div class="fragment">
+<p>Named entity recognition/linking of chemicals:</p>
+<img class="plain" style="width: 90%; margin-top: -5mm;" src="img/biocreative2021e.svg"/>
+</div>
+</section>
+
+<section>
+<h3><span class="cem2">Still Not Good Enough (by far)</span></h3>
+<p>Back-of-the-envelope calculation:</p>
+<img class="plain" style="width: 80%" src="img/fscore.svg"/>
+<p><img class="plain" style="height: 24pt; margin-top: auto; margin-bottom: auto;" src="img/arrow-right.p.svg"/> <span class="cem">Around 60% of retrieved relations are wrong and 60% of existing relations are not retrieved.</span></p>
+</section>
+
+<section>
+<h3><span class="cem">"Text mining? ... Why bury it first and then mine it again?"</span> (Barend Mons)</h3>
+<!-- Source: https://doi.org/10.1186/1471-2105-6-142 -->
+<img class="plain stretch" src="img/burying.jpg"/>
+</section>
+
+<section>
+<h3>Publishing without Burying</h3>
+<img class="plain" style="width: 25%; float: right; margin-left: 1cm;" src="img/journal.jpg"/>
+<ul style="display: block; margin-top: 3cm;">
+<li><span class="cem"><strong>Idea:</strong></span> Let authors publish the main findings of their papers in a machine-interpretable manner right away</li>
+<li><img class="plain" style="height: 24pt; margin-top: auto; margin-bottom: auto;" src="img/arrow-right.p.svg"/> Field Study with Special Issue at Data Science</li>
+</ul>
+</section>
+
+<section>
+<h3>How can we Formally Represent Scientific Findings?</h3>
+<p><span class="cem2">Let's check main findings from 75 random articles across disciplines:</span></p>
+<img class="plain stretch" src="img/75claims1.svg"/>
+</section>
+
+<section>
+<h3>Formally Representing Findings: <span class="cem2">Super Pattern</span></h3>
+<img class="plain" style="width: 60%;" src="img/felix.png"/>
+<div class="fragment">
+<p><img class="plain" style="width: 24pt; margin-top: -3mm;  margin-bottom: -3mm;" src="img/arrow-down.p.svg"/></p>
+<ul style="font-size: 24pt">
+<li><span class="cem2"><strong>Context class:</strong></span> rat brain endothelial cell</li>
+<li><span class="cem2"><strong>Subject class:</strong></span> transient oxidative stress</li>
+<li><span class="cem2"><strong>Qualifier:</strong></span> generally</li>
+<li><span class="cem2"><strong>Relation:</strong></span> affects</li>
+<li><span class="cem2"><strong>Object class:</strong></span> Pgp expression</li>
+</ul>
+</div>
+<div class="fragment">
+<p><img class="plain" style="width: 24pt; margin-top: -3mm;  margin-bottom: -3mm;" src="img/arrow-down.p.svg"/></p>
+<img class="plain" style="width: 90%; margin-top: -2mm;" src="img/logic.png"/>
+</div>
+</section>
+
+<section>
+<h3>Main Findings from 75 Random Articles across Disciplines</h3>
+<img class="plain stretch" src="img/75claims.svg"/>
+<ul>
+<li><span class="cem2">68 can be represented with the super pattern!</span></li>
+<li><span class="cem">Remaining 7 are simple subject-predicate-object statements</span></li>
+</ul>
+</section>
+
+<section>
+<h3>Formalization Papers</h3>
+<ul>
+<li><span class="cem2">Formalization paper:</span> A paper whose novel contribution is the formalization of an existing finding</li>
+<li>First step towards the vision of publishing <span class="cem">formalized original findings</span></li>
+<li>Represented as <span class="cem2">nanopublications</span></li>
+</ul>
+</section>
+
+<section>
+<h3>Publishing Formalization Papers as Nanopublications: <span class="cem2">Assertion</span></h3>
+<img class="plain" style="width: 30%" src="img/nanobench-logo.png"/>
+<img class="plain stretch" src="img/nanobench1.png"/>
+</section>
+
+<section>
+<h3>Publishing Formalization Papers as Nanopublications: <span class="cem2">Metadata</span></h3>
+<img class="plain stretch" src="img/nanobench2.png"/>
+</section>
+
+<section>
+<h3>15 Formalization Papers</h3>
+<table style="font-size: 12pt" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="table table-hover" frame="hsides" id="d158220517e511" rules="groups"><thead id="d158220517e512"><tr id="d158220517e513"><td colspan="1" id="d158220517e514" rowspan="1" valign="top" align="left"></td><td colspan="1" id="d158220517e515" rowspan="1" valign="top" align="left">Authors</td><td colspan="1" id="d158220517e517" rowspan="1" valign="top" align="center">CONTEXT</td><td colspan="1" id="d158220517e519" rowspan="1" valign="top" align="center">SUBJECT</td><td colspan="1" id="d158220517e521" rowspan="1" valign="top" align="left">QUALIFIER</td><td colspan="1" id="d158220517e523" rowspan="1" valign="top" align="left">RELATION</td><td colspan="1" id="d158220517e525" rowspan="1" valign="top" align="center">OBJECT</td></tr>
+</thead><tbody id="d158220517e527"><tr id="d158220517e528"><td colspan="1" id="d158220517e529" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAxBBJ2WkonyQNlXfdCAOaCi64J_xqgVGeaLjVQow9M88" id="d158220517e530" target="xrefwindow">1</a></td><td colspan="1" id="d158220517e532" rowspan="1" valign="top" align="left"><a href="https://orcid.org/0000-0003-2432-4125" id="d158220517e533" target="xrefwindow">Joslin</a></td><td colspan="1" id="d158220517e535" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAtsHwzNs36rGrLnoSbGrPD351Qw033Acoe4zmdXhsYlM#early-human-adipogenesis" id="d158220517e536" target="xrefwindow">early human adipogenesis</a></td><td colspan="1" id="d158220517e539" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAxLYvJ1JrRf2JAowYGbGJleQPmqtpXnXsIvse7GmLeT8#regulatory-element-within-the-first-intron-of-FTO" id="d158220517e540" target="xrefwindow">regulatory element within the first intron of FTO</a></td><td colspan="1" id="d158220517e543" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/generallyQualifier" id="d158220517e544" target="xrefwindow">generally</a></td><td colspan="1" id="d158220517e546" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/generallyQualifierhttps://w3id.org/linkflows/superpattern/terms/affects" id="d158220517e547" target="xrefwindow">affects</a></td><td colspan="1" id="d158220517e549" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAwkXiTv7qCtqOYzlR6ozZRGLRtG6mlogrYdRQ1E4dRDg#expression-of-genes-IRX3-and-IRX5" id="d158220517e550" target="xrefwindow">expression of genes IRX3 and IRX5</a></td></tr>
+<tr id="d158220517e553"><td colspan="1" id="d158220517e554" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAmG2bXxwkIzARk4Mda-lqZU0RVnkpX7hUHBIPcdLHQUU" id="d158220517e555" target="xrefwindow">2</a></td><td colspan="1" id="d158220517e557" rowspan="1" valign="top" align="left"><a href="https://orcid.org/0000-0003-1099-3328" id="d158220517e558" target="xrefwindow">Nichols</a></td><td colspan="1" id="d158220517e560" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/entity/Q101404862" id="d158220517e561" target="xrefwindow">human motor neuron</a></td><td colspan="1" id="d158220517e564" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/entity/Q21133247" id="d158220517e565" target="xrefwindow">TAR DNA binding protein</a></td><td colspan="1" id="d158220517e568" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/canGenerallyQualifier" id="d158220517e569" target="xrefwindow">can generally</a></td><td colspan="1" id="d158220517e571" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/contributesTo" id="d158220517e572" target="xrefwindow">contributes to</a></td><td colspan="1" id="d158220517e574" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAiUYY1dbEDbcsscapEmbMMHsgJmjEJ1yUoNsxZIH1r90#transcription-of-stmn2" id="d158220517e575" target="xrefwindow">transcription of stmn2</a></td></tr>
+<tr id="d158220517e578"><td colspan="1" id="d158220517e579" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAXVRaFjWDlX5cZcVRXETaEIAx6QAyLK5JCrzDP-yDp9U" id="d158220517e580" target="xrefwindow">3</a></td><td colspan="1" id="d158220517e583" rowspan="1" valign="top" align="left"><a href="https://orcid.org/0000-0001-9488-1870" id="d158220517e584" target="xrefwindow">Mietchen</a></td><td colspan="1" id="d158220517e586" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/wiki/Q107644116" id="d158220517e587" target="xrefwindow">dejellied fertilizable stage VI Xenopus laevis oocyte</a></td><td colspan="1" id="d158220517e590" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/wiki/Q107644241" id="d158220517e591" target="xrefwindow">strong static magnetic field</a></td><td colspan="1" id="d158220517e594" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/generallyQualifier" id="d158220517e595" target="xrefwindow">generally</a></td><td colspan="1" id="d158220517e597" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/affects" id="d158220517e598" target="xrefwindow">affects</a></td><td colspan="1" id="d158220517e600" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/wiki/Q5058180" id="d158220517e601" target="xrefwindow">cell cortex</a></td></tr>
+<tr id="d158220517e603"><td colspan="1" id="d158220517e604" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAyg4UgIVovBGia-hk4qEuRzOq14fcOlYAclC6YGQaVYU" id="d158220517e605" target="xrefwindow">4</a></td><td colspan="1" id="d158220517e608" rowspan="1" valign="top" align="left"><a href="https://orcid.org/0000-0002-7770-620X" id="d158220517e609" target="xrefwindow">Ehrhart</a>, <a href="https://orcid.org/0000-0002-5301-3142" id="d158220517e612" target="xrefwindow">Evelo</a></td><td colspan="1" id="d158220517e614" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/UniversalContext" id="d158220517e615" target="xrefwindow">(no context class)</a></td><td colspan="1" id="d158220517e617" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/wiki/Q109406970" id="d158220517e618" target="xrefwindow">genes associated with CAKUT</a></td><td colspan="1" id="d158220517e621" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/sometimesQualifier" id="d158220517e622" target="xrefwindow">sometimes</a></td><td colspan="1" id="d158220517e624" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/isSameAs" id="d158220517e625" target="xrefwindow">is same as</a></td><td colspan="1" id="d158220517e627" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/wiki/Q109406949" id="d158220517e628" target="xrefwindow">targets of vitamin A</a></td></tr>
+<tr id="d158220517e631"><td colspan="1" id="d158220517e632" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAn15vsPJEVdJvjNKtBPo_oadtjeP9oc3Si-69FiJ4poQ" id="d158220517e633" target="xrefwindow">5</a></td><td colspan="1" id="d158220517e636" rowspan="1" valign="top" align="left"><a href="https://orcid.org/0000-0002-0519-7776" id="d158220517e637" target="xrefwindow">Patrinos</a></td><td colspan="1" id="d158220517e639" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RA9pwySo43TIfbvPuhK4ZuisvMsDvZ6TeR5N6MNKft8Nw#patient_undergoing_PCI" id="d158220517e640" target="xrefwindow">patient undergoing PCI</a></td><td colspan="1" id="d158220517e643" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAOxICL4ULhzr5mxC9cyzStCBtpoETQGin6Vr-Ns7JNtA#pharmacogenomics_guided_clopidogrel_therapy" id="d158220517e644" target="xrefwindow">pharmacogenomics guided clopidogrel therapy</a></td><td colspan="1" id="d158220517e647" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/generallyQualifier" id="d158220517e648" target="xrefwindow">generally</a></td><td colspan="1" id="d158220517e650" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/enables" id="d158220517e651" target="xrefwindow">enables</a></td><td colspan="1" id="d158220517e653" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAlfRfPak2jsyyVy4knjOmxQSYtociP8Cc0O7gemMtqQY#cost-effective_treatment" id="d158220517e654" target="xrefwindow">cost-effective treatment</a></td></tr>
+<tr id="d158220517e657"><td colspan="1" id="d158220517e658" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RA1FoHM9lwJ1XAV1eB871XcMAKfod73G_i4YtgoLpJVH0" id="d158220517e659" target="xrefwindow">6</a></td><td colspan="1" id="d158220517e661" rowspan="1" valign="top" align="left"><a href="https://orcid.org/0000-0001-8004-0464" id="d158220517e662" target="xrefwindow">Martorana</a></td><td colspan="1" id="d158220517e664" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/entity/Q5" id="d158220517e665" target="xrefwindow">human</a></td><td colspan="1" id="d158220517e667" rowspan="1" valign="top" align="left"><a href="http://purl.obolibrary.org/obo/GO_0007224" id="d158220517e668" target="xrefwindow">smoothened signaling pathway</a></td><td colspan="1" id="d158220517e670" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/mostlyQualifier" id="d158220517e671" target="xrefwindow">mostly</a></td><td colspan="1" id="d158220517e673" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/affects" id="d158220517e674" target="xrefwindow">affects</a></td><td colspan="1" id="d158220517e676" rowspan="1" valign="top" align="left"><a href="http://purl.obolibrary.org/obo/GO_0014002" id="d158220517e677" target="xrefwindow">astrocyte development</a></td></tr>
+<tr id="d158220517e679"><td colspan="1" id="d158220517e680" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RABzhulhaPhOzo9MxWxl230N72-azdlpMNwu_HtDqsuUc" id="d158220517e681" target="xrefwindow">7</a></td><td colspan="1" id="d158220517e684" rowspan="1" valign="top" align="left"><a href="https://orcid.org/0000-0001-9488-1870" id="d158220517e685" target="xrefwindow">Mietchen</a>, <a href="https://orcid.org/0000-0002-2186-5033" id="d158220517e688" target="xrefwindow">Penev</a>, <a href="https://orcid.org/0000-0002-8083-6048" id="d158220517e691" target="xrefwindow">Dimitrova</a></td><td colspan="1" id="d158220517e693" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/wiki/Q28946370" id="d158220517e694" target="xrefwindow">biodiversity data</a></td><td colspan="1" id="d158220517e696" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RA5Txa3acYP9_MUWEw7s7wenDTB1QXNMB7UehJW-2E-_8#license-with-non-commercial-clause" id="d158220517e697" target="xrefwindow">license with non-commercial clause</a></td><td colspan="1" id="d158220517e700" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/generallyQualifier" id="d158220517e701" target="xrefwindow">generally</a></td><td colspan="1" id="d158220517e703" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/inhibits" id="d158220517e704" target="xrefwindow">inhibits</a></td><td colspan="1" id="d158220517e706" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/wiki/Q58023280" id="d158220517e707" target="xrefwindow">data reuse</a></td></tr>
+<tr id="d158220517e709"><td colspan="1" id="d158220517e710" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAMgThXW6xx8QiPmW9VhVuxWCN2ZWe-pmxDcFfdx_A7z0" id="d158220517e711" target="xrefwindow">8</a></td><td colspan="1" id="d158220517e714" rowspan="1" valign="top" align="left"><a href="https://orcid.org/0000-0002-8083-6048" id="d158220517e715" target="xrefwindow">Dimitrova</a></td><td colspan="1" id="d158220517e717" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAlm6vh2zpFLg189qrDYPtppkL790Pqaw-q2KUhyfJtRY#release-of-openbiodiv-knowledge-graph" id="d158220517e718" target="xrefwindow">release of OpenBiodiv knowledge graph</a></td><td colspan="1" id="d158220517e721" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAaEkIiJLmBJP5kK3JdYjseCRqwutYbdnI8Q3VbzrK9VA#triple-in-openbiodiv-knowledge-graph" id="d158220517e722" target="xrefwindow">triple in OpenBiodiv knowledge graph</a></td><td colspan="1" id="d158220517e725" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/generallyQualifier" id="d158220517e726" target="xrefwindow">generally</a></td><td colspan="1" id="d158220517e728" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/isSameAs" id="d158220517e729" target="xrefwindow">is same as</a></td><td colspan="1" id="d158220517e731" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAEpHUXRKtaLE3Z24sgIUdaxwTBsK2bjshyq9yF00145Y#semantic-triples-extracted-from-biodiversity-literature" id="d158220517e732" target="xrefwindow">semantic triple extracted from biodiversity literature</a></td></tr>
+<tr id="d158220517e735"><td colspan="1" id="d158220517e736" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAXkuXJ4IK10Ai9F39_tOFDy6ewi7znau6OQhUEXP4nPc" id="d158220517e737" target="xrefwindow">9</a></td><td colspan="1" id="d158220517e739" rowspan="1" valign="top" align="left"><a href="https://orcid.org/0000-0003-2310-3013" id="d158220517e740" target="xrefwindow">Brauer</a></td><td colspan="1" id="d158220517e742" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/entity/Q18036664" id="d158220517e743" target="xrefwindow">UNC13A</a></td><td colspan="1" id="d158220517e745" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/entity/Q21133247" id="d158220517e746" target="xrefwindow">TAR DNA binding protein</a></td><td colspan="1" id="d158220517e748" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/generallyQualifier" id="d158220517e749" target="xrefwindow">generally</a></td><td colspan="1" id="d158220517e751" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/inhibits" id="d158220517e752" target="xrefwindow">inhibits</a></td><td colspan="1" id="d158220517e754" rowspan="1" valign="top" align="left"><a href="http://purl.obolibrary.org/obo/VariO_0504" id="d158220517e755" target="xrefwindow">inclusion of cryptic exon</a></td></tr>
+<tr id="d158220517e757"><td colspan="1" id="d158220517e758" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RA22JAQihYeiJkNIjvwnxLPmjuG74yPcRXpPyVX8DV6fA" id="d158220517e759" target="xrefwindow">10</a></td><td colspan="1" id="d158220517e762" rowspan="1" valign="top" align="left"><a href="https://orcid.org/0000-0003-4727-9435" id="d158220517e763" target="xrefwindow">Dumontier</a></td><td colspan="1" id="d158220517e765" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/wiki/Q1172284" id="d158220517e766" target="xrefwindow">data set</a></td><td colspan="1" id="d158220517e768" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAodU4AmRjfzyjwtJK3luO0iyRJJPUBjkijKWdlMHvack#adherenceToTheFAIRGuidingPrinciples" id="d158220517e769" target="xrefwindow">adherence to the FAIR guiding principles</a></td><td colspan="1" id="d158220517e772" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/canGenerallyQualifier" id="d158220517e773" target="xrefwindow">can generally</a></td><td colspan="1" id="d158220517e775" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/enables" id="d158220517e776" target="xrefwindow">enables</a></td><td colspan="1" id="d158220517e778" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAFQovt9yQD7nZ2tdZ9_Uhpb7CsfT3k64pK7dh63xd-50#automatedDiscovery" id="d158220517e779" target="xrefwindow">automated discovery</a></td></tr>
+<tr id="d158220517e782"><td colspan="1" id="d158220517e783" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RA12lVwEtmddK9OwDkZQZlgJaOD2-0NXtAtO_jDaG-3VQ" id="d158220517e784" target="xrefwindow">11</a></td><td colspan="1" id="d158220517e786" rowspan="1" valign="top" align="left"><a href="https://orcid.org/0000-0003-0169-8159" id="d158220517e787" target="xrefwindow">Queralt Rosinach</a></td><td colspan="1" id="d158220517e789" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/entity/Q5" id="d158220517e790" target="xrefwindow">human</a></td><td colspan="1" id="d158220517e792" rowspan="1" valign="top" align="left"><a href="http://purl.obolibrary.org/obo/MONDO_0014109" id="d158220517e793" target="xrefwindow">NGLY1 deficiency</a></td><td colspan="1" id="d158220517e795" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/alwaysQualifier" id="d158220517e796" target="xrefwindow">always</a></td><td colspan="1" id="d158220517e798" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/isCausedBy" id="d158220517e799" target="xrefwindow">is caused by</a></td><td colspan="1" id="d158220517e801" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAZVLqlkbwiX40n0GNxcxJany2Cw3oxMCrNuZtjBClryU#Dysfunction_of_ERAD_pathway" id="d158220517e802" target="xrefwindow">dysfunction of ERAD pathway</a></td></tr>
+<tr id="d158220517e806"><td colspan="1" id="d158220517e807" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAbWbJCYlLhlYBDn9PVxdJP_WUbbi058aRcK-3sOJsRwY" id="d158220517e808" target="xrefwindow">12</a></td><td colspan="1" id="d158220517e810" rowspan="1" valign="top" align="left"><a href="https://orcid.org/0000-0002-0191-7211" id="d158220517e811" target="xrefwindow">Usbeck</a></td><td colspan="1" id="d158220517e813" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/wiki/Q874405" id="d158220517e814" target="xrefwindow">social group</a></td><td colspan="1" id="d158220517e816" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAhnnsMWVM8M29NixCJfVDLWzRzwwCPnUD7LI2kxT-FME#relative-neocortex-size" id="d158220517e817" target="xrefwindow">relative neocortex size</a></td><td colspan="1" id="d158220517e820" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/generallyQualifierhttps://w3id.org/linkflows/superpattern/terms/neverQualifier" id="d158220517e821" target="xrefwindow">never</a></td><td colspan="1" id="d158220517e823" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/affects" id="d158220517e824" target="xrefwindow">affects</a></td><td colspan="1" id="d158220517e826" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAlKYv_sE8qwiSqsRdcr7KrkU1bsqlqiFmhDPtPBwpLrM#social-group-size" id="d158220517e827" target="xrefwindow">social group size</a></td></tr>
+<tr id="d158220517e830"><td colspan="1" id="d158220517e831" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAoo8EvTgfkxJw5SgZXbJvRl5nQG7ygeGaHp8Zud1U4Zw" id="d158220517e832" target="xrefwindow">13</a></td><td colspan="1" id="d158220517e834" rowspan="1" valign="top" align="left"><a href="https://orcid.org/0000-0002-0830-7029" id="d158220517e835" target="xrefwindow">Bainer</a></td><td colspan="1" id="d158220517e837" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAaOAF90U6YxAvnchfj0dRtT5HRz320Pz202aGap-VfuI#ecm-bound-cancer-cell" id="d158220517e838" target="xrefwindow">ecm bound cancer cell</a></td><td colspan="1" id="d158220517e841" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RA-jkb7qPNTSOe_EXltW_rlQWQ9x3_Y1KOzW6J_bbPz4U#glycocalyx-bulk" id="d158220517e842" target="xrefwindow">glycocayx bulk</a></td><td colspan="1" id="d158220517e845" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/generallyQualifier" id="d158220517e846" target="xrefwindow">generally</a></td><td colspan="1" id="d158220517e848" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/increases" id="d158220517e849" target="xrefwindow">increases</a></td><td colspan="1" id="d158220517e851" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAFH8AVn-wnTcSGxvPZ1Uiy_AtOhINlynnAxxiCdcTVWU#integrin-clustering" id="d158220517e852" target="xrefwindow">integrin clustering</a></td></tr>
+<tr id="d158220517e855"><td colspan="1" id="d158220517e856" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAeRSya2qIYymsBxiqOZP_oaQpHXUVXiydKvPCFM-7DDQ" id="d158220517e857" target="xrefwindow">14</a></td><td colspan="1" id="d158220517e859" rowspan="1" valign="top" align="left"><a href="https://orcid.org/0000-0001-6501-0806" id="d158220517e860" target="xrefwindow">Grouès</a>, <a href="https://orcid.org/0000-0002-7979-9921" id="d158220517e863" target="xrefwindow">Vega Moreno</a>, <a href="https://orcid.org/0000-0002-6532-5880" id="d158220517e866" target="xrefwindow">Satagopam</a></td><td colspan="1" id="d158220517e868" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/wiki/Q5" id="d158220517e869" target="xrefwindow">human</a></td><td colspan="1" id="d158220517e871" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAPVWYH0x-xyDa9PfBcGUFly3m1FNEO43KG9s0uH-y6yo#STX1B-mutation" id="d158220517e872" target="xrefwindow">STX1B mutation</a></td><td colspan="1" id="d158220517e875" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/frequentlyQualifier" id="d158220517e876" target="xrefwindow">frequently</a></td><td colspan="1" id="d158220517e878" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/coOccursWith" id="d158220517e879" target="xrefwindow">co-occurs with</a></td><td colspan="1" id="d158220517e881" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/wiki/Q41571" id="d158220517e882" target="xrefwindow">epilepsy</a></td></tr>
+<tr id="d158220517e884"><td colspan="1" id="d158220517e885" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAgoIxfXPqNDY8vnK2EmBQDAFwuFIDJtfaMplTvPMq3pg" id="d158220517e886" target="xrefwindow">15</a></td><td colspan="1" id="d158220517e889" rowspan="1" valign="top" align="left"><a href="https://orcid.org/0000-0001-9079-039X" id="d158220517e890" target="xrefwindow">de Boer</a></td><td colspan="1" id="d158220517e892" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAkCjYmMU3obIrC4IpwUw84JW1ymd312yz0N0g-R9yes0#digital-humanities-research" id="d158220517e893" target="xrefwindow">digital humanities research</a></td><td colspan="1" id="d158220517e896" rowspan="1" valign="top" align="left"><a href="http://purl.org/np/RAcPa1aO8kAt8QYwjQoJq-PIzYvo0jCzYrAiOX_XOyk1w#usage-of-linked-data-scopes" id="d158220517e897" target="xrefwindow">usage of Linked Data Scopes</a></td><td colspan="1" id="d158220517e900" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/canGenerallyQualifier" id="d158220517e901" target="xrefwindow">can generally</a></td><td colspan="1" id="d158220517e903" rowspan="1" valign="top" align="left"><a href="https://w3id.org/linkflows/superpattern/terms/contributesTo" id="d158220517e904" target="xrefwindow">contributes to</a></td><td colspan="1" id="d158220517e906" rowspan="1" valign="top" align="left"><a href="https://www.wikidata.org/wiki/Q535347" id="d158220517e907" target="xrefwindow">transparency</a></td></tr>
+</tbody><div></div></table>
+</tbody><div></div></table>
+</section>
+
+<section data-transition="slide-in">
+<h3>Formalization Paper (What Humans See)</h3>
+<img class="plain stretch" src="img/formalization-paper1.svg"/>
+</section>
+
+<section data-transition="none">
+<h3>Formalization Paper (What Humans See)</h3>
+<img class="plain stretch" src="img/formalization-paper2.svg"/>
+</section>
+
+<section data-transition="none">
+<h3>Formalization Paper (What Humans See)</h3>
+<img class="plain stretch" src="img/formalization-paper.svg"/>
+</section>
+
+<section data-transition="none">
+<h3>Formalization Paper (What Humans See)</h3>
+<img class="plain stretch" src="img/formalization-paper-x.svg"/>
+</section>
+
+<section data-transition="slide-in">
+<h3>Formalization Paper (What Machines See)</h3>
+<img class="plain stretch" src="img/nanopub-bot1.svg"/>
+</section>
+
+<section data-transition="none">
+<h3>Formalization Paper (What Machines See)</h3>
+<img class="plain stretch" src="img/nanopub-bot.svg"/>
+</section>
+
+<section>
+<h3><span class="cem">Welcome to the New Era of Scientific Publishing!</span><br/></h3>
+<div class="fragment">
+<p style="font-size: 26pt">These slides: <a href="https://tinyurl.com/ios35era">https://tinyurl.com/ios35era</a></p>
+<p><strong>References/Links:</strong></p>
+<ul style="font-size: 26pt">
+<li>Cristina-Iulia Bucur, Tobias Kuhn, Davide Ceolin, Jacco van Ossenbruggen.
+<a href="https://doi.org/10.1145/3460210.3493561">Expressing high-level scientific claims with formal semantics</a>.
+In <em>Proceedings of K-CAP '21</em>.
+ACM, 2021.</li>
+<li>Cristina-Iulia Bucur, Tobias Kuhn, Davide Ceolin, Jacco van Ossenbruggen.
+<a href="https://arxiv.org/abs/2203.01608">Nanopublication-Based Semantic Publishing and Reviewing: A Field Study with Formalization Papers</a>. 
+<em>arXiv 2203.01608</em>, 2022.</li>
+<li>Special Issue: <a href="https://content.iospress.com/journals/data-science/5/1">https://content.iospress.com/journals/data-science/5/1</a></li>
+<li>Nanobench: <a href="https://github.com/peta-pico/nanobench">https://github.com/peta-pico/nanobench</a></li>
+</ul>
+</div>
+</section>
+
+</div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="init.js"></script>
+</body>
+</html>
